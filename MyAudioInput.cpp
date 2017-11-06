@@ -17,8 +17,8 @@ void MyAudioInput::run()
 	format.setSampleRate(8000);
 	format.setSampleSize(16);
 	format.setSampleType(QAudioFormat::SignedInt);
-	QAudioInput player(format);
-	QIODevice *device = player.start();
+    QAudioInput source(format);
+    QIODevice *device = source.start();
 
 	while (1) {
 		if (isInterruptionRequested()) break;
@@ -26,7 +26,7 @@ void MyAudioInput::run()
 		int peak = INT_MIN;
 
 		while (1) {
-			int n = player.bytesReady();
+            int n = source.bytesReady();
 			n /= 2;
 			if (n < 400) break;
 			for (int i = 0; i < n; i++) {
