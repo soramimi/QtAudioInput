@@ -25,12 +25,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        MainWindow.cpp \
-    MyAudioInput.cpp
+        MainWindow.cpp
 
 HEADERS += \
-        MainWindow.h \
-    MyAudioInput.h
+        MainWindow.h
 
 FORMS += \
         MainWindow.ui

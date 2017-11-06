@@ -19,7 +19,8 @@ public:
 	~MainWindow();
 
 private slots:
-	void onUpdatePeak(int v);
+    void updatePeak(int v);
+    void onReadyRead();
 private:
 	Ui::MainWindow *ui;
 };
